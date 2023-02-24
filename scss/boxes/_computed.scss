@@ -1,0 +1,33 @@
+.computed-box {
+  background-image: url(../../images/Backgroundcomputed.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  padding-bottom: 110px;
+}
+.computed {
+  text-align: center
+
+}
+.computed-text {
+  @include textStyle(38px, 700, 45px, #fff);
+	font-family: "work Sans";
+}
+.computed-info {
+  @include textStyle(21px, 400, 28px, #fff);
+	font-family: "work Sans";
+	max-width: 650px;
+	padding: 20px 0;
+  margin:  0 auto;
+  opacity: 0.8;
+}
+.computed-black {
+	@include flexBox(flex, center, center, nowrap);
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 25px auto;
+}
+
+

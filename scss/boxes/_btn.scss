@@ -1,0 +1,47 @@
+.btn-box {
+  background-color: #fff;
+  padding: 120px 0;
+}
+.btn {
+  text-align: center;
+}
+.btn-info {
+  @include textStyle(38px, 700, 45px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.btn-hero {
+  @include allBtn($info, 10px, none, 11px 26px);
+	@include textStyle(16px, 500, 19px, #fff);
+	font-family: "work Sans";
+  margin-top: 20px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-right: 12px;
+
+  margin-top: 15px 0;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@media (max-width:630px) {
+  .btn-box{
+    padding: 40px 0;
+  }
+}
+
+
+@media (max-width:415px) {
+  .btn-info{
+  @include textStyle(30px, 700, 38px, rgba(37, 38, 38, 1));
+
+  }
+}

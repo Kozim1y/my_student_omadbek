@@ -1,0 +1,73 @@
+.brand-box {
+  background-color: #fff;
+  padding: 35px;
+}
+
+.brand {
+  text-align: center
+}
+.brand-text {
+  @include textStyle(38px, 700, 45px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+}
+.brand-info {
+  @include textStyle(21px, 400, 28px, #707273);
+	font-family: "work Sans";
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.brand-cards {
+	@include flexBox(flex, space-between, center, wrap);
+  padding: 10px 0;
+}
+.cards-item {
+  width: 261px;
+  height: 261px;
+  border-radius:10px;
+  padding: 35px 20px;
+  transition: all 0.4s ease;
+  margin: 0 auto;
+  img {
+    margin: 0 auto;
+  }
+
+  &:hover{
+    background-image: url(../../images/Group\ 351hover-bg.png);
+  }
+}
+.cards-item-text {
+  @include textStyle(21px, 600, 28px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+  padding: 10px 0;
+}
+.cards-item-info {
+  @include textStyle(16px, 400, 28px, #707273);
+	font-family: "work Sans";
+}
+
+
+@media (max-width:500px) {
+  .brand-box {
+    padding: 0;
+  }
+  .brand-info{
+    padding: 10px 0;
+  }
+}
+
+@media (max-width:370px) {
+  .brand-text{
+  @include textStyle(34px, 700, 40px, rgba(37, 38, 38, 1));
+
+  }
+}
+
+@media (max-width:333px) {
+  .cards-item{
+    padding: 20px 10px;
+  margin: 20px auto;
+
+  }
+  
+}

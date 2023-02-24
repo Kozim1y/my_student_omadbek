@@ -1,0 +1,133 @@
+footer {
+  background-color: rgba(44, 53, 62, 1);
+  padding: 79px 0 39px 0;
+}
+.footer-in {
+	@include flexBox(flex, space-between, center, wrap);
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+
+.footer-item {
+  
+  padding: 10px 0;
+
+}
+.f-name {
+  @include textStyle(21px, 600, 23px, #fff);
+	font-family: "work Sans";
+}
+.price {
+  @include textStyle(38px, 600, 40px, #fff);
+	font-family: "work Sans";
+
+
+  sup{
+  @include textStyle(16px, 600, 18px, #fff);
+	font-family: "work Sans";
+  margin-right: -9px;
+
+
+  }
+
+  sub{
+    @include textStyle(16px, 600, 18px, #fff);
+    font-family: "work Sans";
+    margin-left: -10px;
+
+  }
+}
+.footer-item-link {
+  @include textStyle(16px, 400, 30px, #fff);
+  font-family: "work Sans";
+}
+.footer-item-btn {
+  @include allBtn(transparent, 10px, 1px solid #fff, 15px 24px);
+	@include textStyle(16px, 500, 19px, #fff);
+	font-family: "work Sans";
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-right: 12px;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.footer-out {
+	@include flexBox(flex, space-between, start,wrap);
+
+}
+
+.foot-menu {
+	@include flexBox(flex, start, center, wrap);
+
+}
+.foot-menu-item {
+  margin-right: 25px ;
+}
+.menu-item-link {
+  @include textStyle(16px, 400, 30px, #fff);
+  font-family: "work Sans";
+}
+.site-info {
+  @include textStyle(12px, 400, 20px, #fff);
+  font-family: "work Sans";
+  padding: 15px 0;
+
+}
+.social-line {
+	@include flexBox(flex, center, center, nowrap);
+}
+.social-item {
+  margin-left: 30px;
+  transition: all 0.4s ease;
+
+  &:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+
+  a{
+    opacity: 0.5;
+    transition: all 0.4s ease;
+  color: #fff;
+
+  
+    &:hover {
+      opacity: 1;
+    }
+  
+
+  }
+}
+
+@media (max-width:932px) {
+  .footer-line{
+    margin: 20px auto;
+    
+  }
+}
+
+
+@media (max-width:565px) {
+  .foot-menu-item{
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+footer{
+  padding: 25px 0;
+}
+}

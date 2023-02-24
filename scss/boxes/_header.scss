@@ -1,0 +1,135 @@
+header {
+	height: 0;
+}
+
+.header-in {
+	padding: 22px 0;
+	@include flexBox(flex, space-between, center, nowrap);
+}
+.header-line {
+	@include flexBox(flex, center, center, nowrap);
+}
+.header-line-item {
+	margin: 0 22px;
+	transition: all 0.3s ease;
+	position: relative;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.item-link {
+	@include textStyle(16px, 500, 19px, #969999);
+	font-family: "work Sans";
+	&:hover {
+		scale: 1.1;
+		color: $info;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+.header-line-item::before {
+	position: absolute;
+	content: "";
+	bottom: -3px;
+	border-radius: 5px;
+	height: 2px;
+	width: 100%;
+	background-color: $info;
+	transform: scalex(0);
+}
+
+.header-line-item:hover::before {
+	animation: marking 0.3s both ease-in-out;
+	transform: scalex(1);
+}
+
+@keyframes marking {
+	0% {
+		transform: scalex(0.2);
+	}
+
+	20% {
+		transform: scalex(0.4);
+	}
+
+	40% {
+		transform: scalex(0.6);
+	}
+
+	60% {
+		transform: scalex(0.8);
+	}
+
+	80% {
+		transform: scalex(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.b-b-box {
+	@include flexBox(flex, center, center, nowrap);
+}
+
+.header-btn {
+	@include allBtn($info, 10px, none, 11px 24px);
+	@include textStyle(16px, 500, 19px, #fff);
+	font-family: "work Sans";
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-right: 12px;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.burger {
+	display: none;
+	span {
+		width: 26px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: $info;
+		display: block;
+	}
+
+	span:nth-child(2) {
+		margin: 4px 0;
+	}
+}
+
+@media (max-width: 867px) {
+	.header-line-item {
+		margin: 0 15px;
+	}
+}
+
+@media (max-width: 780px) {
+	.header-line {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+@media (max-width: 360px) {
+	.header-btn {
+		@include allBtn($info, 10px, none, 11px 20px);
+	}
+}

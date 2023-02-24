@@ -1,0 +1,48 @@
+.world-box {
+  background-color: #fff;
+  padding: 20px 0;
+}
+.world {
+  text-align: center;
+}
+.world-text {
+  @include textStyle(38px, 700, 45px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+}
+.worl-info {
+  @include textStyle(21px, 400, 28px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+	max-width: 1050px;
+	padding: 20px 0;
+  margin:  0 auto;
+  opacity: 0.8;
+}
+.world-line {
+	@include flexBox(flex, space-between, center, wrap);
+
+}
+.world-item {
+  text-align: center;
+  margin: 10px auto;
+
+  img{
+    margin: 14px auto;
+
+  }
+
+  border-bottom: 3px solid transparent ;
+  border-image: url(../../images/Styleborder.png) 5 stretch;
+}
+
+
+.worl-item-text {
+  @include textStyle(21px, 600, 28px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+  padding: 10px 0;
+}
+.worl-item-info {
+  @include textStyle(16px, 400, 20px, #707273);
+	font-family: "work Sans";
+  padding: 10px 0;
+  max-width: 320px;
+}

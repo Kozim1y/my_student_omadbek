@@ -1,0 +1,48 @@
+.director-box {
+  background-image: url(../../images/Backgroundbg-heros.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.director {
+  text-align: center;
+}
+.director-info {
+  @include textStyle(32px, 500, 35px, #707273);
+	font-family: "work Sans";
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.names-box {
+	@include flexBox(flex, center, center, nowrap);
+  padding-top: 35px;
+ 
+}
+.director-name {
+  margin-left: 10px;
+}
+.d-name {
+  @include textStyle(21px, 500, 28px, #707273);
+	font-family: "work Sans";
+  padding: 5px 0;
+}
+.director-name-info {
+  @include textStyle(12px, 500, 16px, #707273);
+	font-family: "work Sans";
+  text-align: left;
+}
+
+@media (max-width:350px) {
+  .director-info{
+  @include textStyle(25px, 500, 28px, #707273);
+  }
+
+  .names-box{
+  padding-top: 0px;
+
+  }
+
+
+}

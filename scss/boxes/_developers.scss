@@ -1,0 +1,70 @@
+.admins-box {
+	background-color: #fff;
+	padding: 20px 0;
+}
+.admins {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+
+.admin-content-text {
+	@include textStyle(38px, 700, 45px, rgba(37, 38, 38, 1));
+	font-family: "work Sans";
+}
+.admin-info-box {
+	@include flexBox(flex, start, center, nowrap);
+}
+.content-text-info {
+	@include textStyle(21px, 400, 28px, #707273);
+	font-family: "work Sans";
+	padding: 20px 0;
+}
+.b-line {
+	width: 61px;
+	height: 1px;
+	background-color: #707273;
+	margin-top: 13px;
+}
+.admin-info {
+	@include textStyle(21px, 400, 28px, #707273);
+	font-family: "work Sans";
+	max-width: 650px;
+	padding: 20px 0;
+}
+.admin-content-btn {
+	@include allBtn(transparent, 10px, 1px solid $info, 14px 24px);
+	@include textStyle(16px, 500, 19px, $info);
+	font-family: "work Sans";
+	cursor: pointer;
+	transition: all 0.2s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.admin-bg-img {
+	background-image: url(../../images/Group\ 351admins.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	@include flexBox(flex, center, center, nowrap);
+	width: 100%;
+	height: auto;
+	padding: 120px 0;
+}
+
+@media (max-width: 500px) {
+	.content-text-info {
+		@include textStyle(21px, 400, 28px, #707273);
+		font-family: "work Sans";
+		padding: 10px 0;
+	}
+	.admins-content {
+		text-align: center;
+	}
+	.admins {
+		flex-direction: column;
+	}
+}
